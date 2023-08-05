@@ -19,17 +19,22 @@
                         <v-row justify="center" class="pa-3">
                             <v-col cols="12" md="6">
                                 <v-card max-width="500">
-                                    <v-img src="https://souls.care/assets/addhere.svg" height="500" cover />
+                                    <v-img src="https://souls.care/assets/addhere.svg"
+                                        class="animate__animated animate__pulse" height="500" cover />
                                 </v-card>
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Pet name" required></v-text-field>
+                                <label>
+                                    Pet name
+                                    <v-text-field required type="text" />
+                                </label>
                             </v-col>
                             <v-col cols="12">
-                                <v-btn variant="plain" class="ma-2 text-capitalize" @click="dialog2 = true">
-                                    Pet Type
-                                </v-btn>
-                                <v-dialog v-model="dialog2" width="auto">
+                                <label class="clickable-label">
+                                    Pet type
+                                    <v-text-field required @click="dialog2 = true" />
+                                </label>
+                                <v-dialog v-model="dialog2" width="auto" location="Anchor">
                                     <v-card>
                                         <v-card-text>
                                             <v-list min-width="300" class="text-center" :items="items"></v-list>
@@ -38,29 +43,38 @@
                                 </v-dialog>
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Microchip Number" persistent-hint required></v-text-field>
+                                <label>
+                                    Microchip Number
+                                    <v-text-field required type="number" />
+                                </label>
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Retype Microchip Number" required></v-text-field>
+                                <label>
+                                    Retype Microchip Number
+                                    <v-text-field required type="number" />
+                                </label>
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Birthday" type="date" required></v-text-field>
+                                <label>
+                                    Birthday
+                                    <v-text-field type="date" required />
+                                </label>
                             </v-col>
                             <v-col cols="12">
                                 <p class="gender">Gender</p>
                                 <v-radio-group>
-                                    <v-radio label="Male" value="1"></v-radio>
-                                    <v-radio label="Female" value="2"></v-radio>
+                                    <v-radio label="Male" value="1" />
+                                    <v-radio label="Female" value="2" />
                                 </v-radio-group>
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Weight Kg (optional)" type="number" required></v-text-field>
+                                <v-text-field label="Weight Kg (optional)" type="number" required />
                             </v-col>
                             <v-col cols="12">
-                                <v-text-field label="Behaviors (optional)" type="number" required></v-text-field>
+                                <v-text-field label="Behaviors (optional)" type="number" required />
                             </v-col>
                             <v-col cols="12">
-                                <v-textarea label="Further Details and Description" type="number" required></v-textarea>
+                                <v-textarea label="Further Details and Description" type="number" required />
                             </v-col>
                             <v-col cols="12">
                                 <v-btn block color="#64938c" class="text-capitalize">Save</v-btn>
@@ -118,5 +132,9 @@ export default {
     font-weight: 700;
     font-size: 16px;
     color: #64938c;
+}
+
+.clickable-label {
+    cursor: pointer;
 }
 </style>

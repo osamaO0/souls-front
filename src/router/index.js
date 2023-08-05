@@ -15,6 +15,16 @@ const router = createRouter({
       component: () => import("../components/MyAdoption.vue"),
     },
     {
+      path: "/my-lost-pets",
+      name: "MyLostPets",
+      component: () => import("../components/MyLostPets.vue"),
+    },
+    {
+      path: "/my-address",
+      name: "MyAddress",
+      component: () => import("../components/MyAddress.vue"),
+    },
+    {
       path: "/my-profile",
       name: "MyProfile",
       component: () => import("../components/MyProfile.vue"),

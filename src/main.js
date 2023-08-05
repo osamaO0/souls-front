@@ -24,6 +24,9 @@ const vuetify = createVuetify({
   },
 })
 
+//animate.css
+import 'animate.css';
+
 
 const app = createApp(App)
 

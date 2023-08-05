@@ -46,6 +46,7 @@ export default {
             {
                 name: 'My Lost Pets',
                 id: 3,
+                route: '/my-lost-pets'
             },
         ],
     }),

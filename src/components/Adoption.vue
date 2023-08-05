@@ -41,7 +41,7 @@
                     <v-card height="200" width="200" class="card" color="#64938c" flat v-bind="props"
                         :elevation="isHovering ? 12 : 2" :class="{ 'on-hover': isHovering }">
                         <div class="d-flex align-center justify-center" style="height: 100%;">
-                            <p>View More</p>
+                            <router-link to="/adoption" class="text-decoration-none text-black">View More</router-link>
                         </div>
                     </v-card>
                 </template>

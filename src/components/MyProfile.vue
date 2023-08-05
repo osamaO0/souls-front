@@ -8,10 +8,9 @@
         </v-row>
         <v-row justify="center">
             <v-col cols="12" md="6">
-                <v-card class="text-center py-2" style="cursor: pointer; background-color: #64938c" v-ripple>
-                    <v-icon icon="mdi-plus" class="float-left ml-2" />
-                    Add new Pet
-                </v-card>
+
+                <AddNewPetDialog />
+
             </v-col>
         </v-row>
         <v-row>
@@ -25,9 +24,12 @@
                     <v-card width="1200" class="mt-3 pa-6 card">
                         <v-card-subtitle class="summary mb-3">My Adoptions & Lost Pets</v-card-subtitle>
                         <v-list :items="items" item-title="name" item-value="id" bg-color="#64938c" class="px-3">
-                            <template v-slot:append>
-                                <v-icon icon="mdi-arrow-right-thin" />
-                            </template>
+                            <v-list-item v-for="item in items" :key="item" :to="item.route">
+                                <v-list-item-title v-text="item.name"></v-list-item-title>
+                                <template v-slot:append>
+                                    <v-icon icon="mdi-arrow-right-thin" />
+                                </template>
+                            </v-list-item>
                         </v-list>
                     </v-card>
                 </div>
@@ -61,22 +63,29 @@
 </template>
   
 <script>
+import AddNewPetDialog from '../dialogs/AddNewPetDialog.vue';
+
 export default {
     name: 'MyProfile',
+
+    components: { AddNewPetDialog },
 
     data: () => ({
         items: [
             {
                 name: 'My Pets',
                 id: 1,
+                route: '/my-address'
             },
             {
                 name: 'My Adoptions',
                 id: 2,
+                route: '/my-adoptions'
             },
             {
                 name: 'My Lost Pets',
                 id: 3,
+                route: '/my-lost-pets'
             },
         ],
     }),
