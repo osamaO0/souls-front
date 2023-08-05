@@ -9,7 +9,7 @@
                 <v-card-title class="text-center" style="background-color: #013d40">
                     <div>
                         <span class="text-body-1 text-white">New Pet</span>
-                        <v-btn rounded class="float-right" size="small" variant="text">
+                        <v-btn rounded class="float-right" size="small" variant="text" @click="dialog = false">
                             <v-icon color="white">mdi-close</v-icon>
                         </v-btn>
                     </div>

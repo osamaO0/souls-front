@@ -10,6 +10,11 @@ const router = createRouter({
       component: Home,
     },
     {
+      path: "/my-adoptions",
+      name: "MyAdoption",
+      component: () => import("../components/MyAdoption.vue"),
+    },
+    {
       path: "/my-profile",
       name: "MyProfile",
       component: () => import("../components/MyProfile.vue"),

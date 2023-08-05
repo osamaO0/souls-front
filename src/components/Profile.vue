@@ -4,7 +4,6 @@
         <v-card variant="outlined" width="800" class="text-center pa-4 card">
             <v-card-text>
                 <span>You Don't have any pet now.</span>
-                <!-- <v-btn block rounded class="mt-3 btn" color="#013d40" prepend-icon="mdi-plus">Add New Pet</v-btn> -->
                 <AddNewPetDialog />
             </v-card-text>
         </v-card>
@@ -12,10 +11,13 @@
     <div class="d-flex justify-center">
         <v-card width="1200" class="mt-3 pa-4 card">
             <v-card-subtitle class="summary">Summary</v-card-subtitle>
-            <v-list :items="items" item-title="name" item-value="id" bg-color="#cdeae4" class="px-3">
-                <template v-slot:append>
-                    <v-btn color="#013d40" rounded size="x-small" class="text-white">0</v-btn>
-                </template>
+            <v-list item-title="name" item-value="id" bg-color="#cdeae4" class="px-3">
+                <v-list-item v-for="item in items" :key="item" :to="item.route">
+                    <v-list-item-title v-text="item.name"></v-list-item-title>
+                    <template v-slot:append>
+                        <v-btn color="#013d40" rounded size="x-small" class="text-white">0</v-btn>
+                    </template>
+                </v-list-item>
             </v-list>
         </v-card>
     </div>
@@ -34,10 +36,12 @@ export default {
             {
                 name: 'My Pets',
                 id: 1,
+                route: '/my-profile'
             },
             {
                 name: 'My Adoptions',
                 id: 2,
+                route: '/my-adoptions'
             },
             {
                 name: 'My Lost Pets',
