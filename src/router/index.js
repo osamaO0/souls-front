@@ -35,9 +35,19 @@ const router = createRouter({
       component: () => import("../components/AdoptionPage.vue"),
     },
     {
+      path: "/adoption/:id",
+      name: "AdoptionDetails",
+      component: () => import("../components/AdoptionDetails.vue"),
+    },
+    {
       path: "/lost-found",
       name: "LostAndFoundPage",
       component: () => import("../components/LostAndFoundPage.vue"),
+    },
+    {
+      path: "/lost-found/:id",
+      name: "LostAndFoundDetails",
+      component: () => import("../components/LostAndFoundDetails.vue"),
     },
     {
       path: "/:catchAll(.*)",

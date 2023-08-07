@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<!-- <style scoped>
 .darken {
     background-color: #64938c;
     display: flex;
@@ -52,4 +52,4 @@ export default {
     font-size: 17px;
     color: #013d40;
 }
-</style>
+</style> -->

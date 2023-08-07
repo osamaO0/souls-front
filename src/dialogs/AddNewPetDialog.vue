@@ -57,7 +57,7 @@
                             <v-col cols="12">
                                 <label>
                                     Birthday
-                                    <v-text-field type="date" required />
+                                    <VueDatePicker v-model="date" utc style="color: #cdeae4" />
                                 </label>
                             </v-col>
                             <v-col cols="12">
@@ -88,8 +88,18 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+
 export default {
     name: 'AddNewPitDialog',
+
+    setup() {
+        const date = ref();
+
+        return {
+            date,
+        };
+    },
 
     data: () => ({
         dialog: false,
