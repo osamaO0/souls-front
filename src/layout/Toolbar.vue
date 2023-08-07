@@ -1,26 +1,29 @@
 <template>
     <v-layout>
-        <v-app-bar color="#64938c" prominent>
+        <v-app-bar color="#64938c">
             <v-app-bar-nav-icon variant="text" class="mr-6 d-md-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-avatar size="80" class="mr-4 d-none d-md-flex">
                 <v-img src="https://justfields.com/storage/projects/7M5rV059/download.webp" />
             </v-avatar>
 
-            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex btn" active variant="text"
+            <v-toolbar-items variant="flat">
+            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex btn" variant="text"
                 to="/">Home</v-btn>
-            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex" variant="text" to="/my-profile">My
+            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex btn" variant="text"
+                to="/my-profile">My
                 Profile</v-btn>
-            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex" variant="text"
+            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex btn" variant="text"
                 to="/adoption">Adoption</v-btn>
-            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex" variant="text" to="/lost-found">Lost
+            <v-btn flat v-ripple size="small" class="text-capitalize d-none d-md-flex btn" variant="text"
+                to="/lost-found">Lost
                 & Found</v-btn>
-
+            </v-toolbar-items>
             <v-spacer />
 
             <v-btn rounded>
                 <v-icon icon="mdi mdi-google-translate" size="x-large" />
             </v-btn>
-            <v-btn rounded>
+            <v-btn rounded to="/my-profile">
                 <v-icon icon="mdi mdi-account-lock" size="x-large" />
             </v-btn>
         </v-app-bar>
@@ -58,18 +61,15 @@
         <v-main>
             <RouterView />
         </v-main>
-        <Footer />
     </v-layout>
 </template>
 
 <script>
 import { RouterView } from 'vue-router'
-import Footer from './Footer.vue';
 
 export default {
     name: 'Toolbar',
 
-    components: { Footer },
 
     data: () => ({
         drawer: false,

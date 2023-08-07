@@ -21,6 +21,7 @@
       </v-col>
     </v-row>
   </v-container>
+  <Footer />
 </template>
 
 <script>
@@ -28,10 +29,11 @@ import Banner from '../layout/Banner.vue';
 import Profile from '../components/Profile.vue';
 import Adoption from '../components/Adoption.vue';
 import LostAndFound from '../components/LostAndFound.vue';
+import Footer from '../layout/Footer.vue';
 
 export default {
   name: 'Home',
 
-  components: { Banner, Profile, Adoption, LostAndFound }
+  components: { Banner, Profile, Adoption, LostAndFound, Footer }
 }
 </script>

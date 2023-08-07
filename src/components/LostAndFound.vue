@@ -19,37 +19,47 @@
         <swiper-slide class="swiper-slide">
             <router-link to="/lost-found">
                 <div class="card" style="background-color: #64938c">
-                    <img src="https://souls.care/assets/icon/lost.svg" class="img">
-                </div>
-            </router-link>
-        </swiper-slide>
-        <swiper-slide class="swiper-slide">
-            <div class="card">
-                <img
-                    src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FDlKW9mZMILIF3YAYms2B%2F15508162607.321676.jpeg?alt=media&token=45a752f2-43c2-4061-8280-6cdef99b789d">
-            </div>
-        </swiper-slide>
-        <swiper-slide class="swiper-slide">
-            <router-link to="/lost-found/1">
-                <div class="card">
-                    <img
-                        src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FGG9KaOTh712lzl1gGj5c%2F5432167750.926577.jpeg?alt=media&token=d259331b-3e89-49d4-859c-e117e3ecd5a9">
+                    <v-img src="https://souls.care/assets/icon/lost.svg" class="img"></v-img>
                 </div>
             </router-link>
         </swiper-slide>
         <swiper-slide class="swiper-slide">
             <router-link to="/lost-found/1">
                 <div class="card">
-                    <img
-                        src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FGG9KaOTh712lzl1gGj5c%2F5432167750.926577.jpeg?alt=media&token=d259331b-3e89-49d4-859c-e117e3ecd5a9">
+                    <v-img :width="220" aspect-ratio="16/9" cover class="image-container"
+                        src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FDlKW9mZMILIF3YAYms2B%2F15508162607.321676.jpeg?alt=media&token=45a752f2-43c2-4061-8280-6cdef99b789d">
+                        <div class="div">Lost</div>
+                    </v-img>
                 </div>
             </router-link>
         </swiper-slide>
         <swiper-slide class="swiper-slide">
             <router-link to="/lost-found/1">
                 <div class="card">
-                    <img
+                    <v-img :width="220" aspect-ratio="16/9" cover class="image-container"
                         src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FGG9KaOTh712lzl1gGj5c%2F5432167750.926577.jpeg?alt=media&token=d259331b-3e89-49d4-859c-e117e3ecd5a9">
+                        <div class="div">Found</div>
+                    </v-img>
+                </div>
+            </router-link>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <router-link to="/lost-found/1">
+                <div class="card">
+                    <v-img :width="220" aspect-ratio="16/9" cover class="image-container"
+                        src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FGG9KaOTh712lzl1gGj5c%2F5432167750.926577.jpeg?alt=media&token=d259331b-3e89-49d4-859c-e117e3ecd5a9">
+                        <div class="div">Lost</div>
+                    </v-img>
+                </div>
+            </router-link>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <router-link to="/lost-found/1">
+                <div class="card">
+                    <v-img :width="220" aspect-ratio="16/9" cover class="image-container"
+                        src="https://firebasestorage.googleapis.com/v0/b/souls-cf239.appspot.com/o/petsImages%2FGG9KaOTh712lzl1gGj5c%2F5432167750.926577.jpeg?alt=media&token=d259331b-3e89-49d4-859c-e117e3ecd5a9">
+                        <div class="div">Found</div>
+                    </v-img>
                 </div>
             </router-link>
         </swiper-slide>
@@ -114,7 +124,7 @@ swiper-slide {
     align-items: center;
 }
 
-.swiper-slide img {
+.swiper-slide v-img {
     display: block;
     width: 200px;
     height: 200px;
@@ -124,5 +134,24 @@ swiper-slide {
 
 .swiper-slide {
     width: 200px !important;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    max-width: 200px;
+}
+
+.div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #cce2da;
+    font-weight: bold;
+    color: black;
+    opacity: 0.8;
 }
 </style>

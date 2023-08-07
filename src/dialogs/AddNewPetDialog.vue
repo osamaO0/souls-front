@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" width="1024">
             <template v-slot:activator="{ props }">
-                <v-btn block rounded class="mt-3 btn" color="#013d40" prepend-icon="mdi-plus" v-bind="props">Add New
+                <v-btn block rounded="lg" class="mt-6 btn" color="#64938c" prepend-icon="mdi-plus" v-bind="props">Add New
                     Pet</v-btn>
             </template>
             <v-card>
@@ -20,7 +20,10 @@
                             <v-col cols="12" md="6">
                                 <v-card max-width="500">
                                     <v-img src="https://souls.care/assets/addhere.svg"
-                                        class="animate__animated animate__pulse" height="500" cover />
+                                        class="animate__animated animate__pulse" height="500" cover>
+                                        <v-file-input @change="handleFileInput" class="file-input"
+                                            ref="fileInput"></v-file-input>
+                                    </v-img>
                                 </v-card>
                             </v-col>
                             <v-col cols="12">
@@ -123,6 +126,12 @@ export default {
             },
         ]
     }),
+
+    methods: {
+        handleFileInput(event) {
+            console.log('Selected file:', event.target.files[0]);
+        },
+    },
 }
 </script>
 
@@ -146,5 +155,16 @@ export default {
 
 .clickable-label {
     cursor: pointer;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
 }
 </style>

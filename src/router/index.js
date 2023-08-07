@@ -30,6 +30,21 @@ const router = createRouter({
       component: () => import("../components/MyProfile.vue"),
     },
     {
+      path: "/edit-profile",
+      name: "EditProfile",
+      component: () => import("../components/EditProfile.vue"),
+    },
+    {
+      path: "/change-mobile",
+      name: "ChangeMobile",
+      component: () => import("../components/ChangeMobile.vue"),
+    },
+    {
+      path: "/change-password",
+      name: "ChangePassword",
+      component: () => import("../components/ChangePassword.vue"),
+    },
+    {
       path: "/adoption",
       name: "AdoptionPage",
       component: () => import("../components/AdoptionPage.vue"),

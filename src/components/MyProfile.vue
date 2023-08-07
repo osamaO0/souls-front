@@ -42,20 +42,19 @@
                         <v-row>
                             <v-col cols="6">
                                 <v-card-title style="color: #737373">Username</v-card-title>
-                                <p class="ml-4" style="color: #838887">test@test.com</p>
-                                <p class="ml-4" style="color: #838887">12131</p>
-                                <span class="ml-4">
-                                    <span class="font-weight-bold" style="color: #838786">Your Mobile Number</span>
-                                    <p class="d-inline ml-2" style="color: #89918f">+201022655742</p>
-                                </span>
                             </v-col>
                             <v-col cols="6">
                                 <v-btn icon="mdi-file-edit-outline" class="float-right" size="small" flat variant="text"
-                                    color="#64938c" />
+                                    color="#64938c" to="/edit-profile" />
                             </v-col>
                         </v-row>
+                        <p class="ml-4" style="color: #838887">test@test.com</p>
+                        <p class="ml-4" style="color: #838887">12131</p>
+                        <span class="ml-4 d-inline">
+                            <span class="font-weight-bold" style="color: #838786">Your Mobile Number</span>
+                            <p class="d-inline ml-2" style="color: #89918f">+201022655742</p>
+                        </span>
                     </v-card>
-
                 </div>
             </v-col>
         </v-row>
